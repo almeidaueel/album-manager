@@ -26,3 +26,53 @@ CREATE TABLE IF NOT EXISTS albums (
     status VARCHAR(20)
 
 );
+
+INSERT INTO albums 
+
+(titulo, artista, genero, ano, gravadora, capa, faixas, nota, status)
+
+VALUES
+
+(
+
+'Lança Perfume',
+
+'Rita Lee',
+
+'Pop',
+
+1980,
+
+'EMI Records',
+
+'capas/lancaperfume.jpeg',
+
+8,
+
+10,
+
+'Ouvido'
+
+),
+
+(
+
+'Mania de Você',
+
+'Rita Lee',
+
+'Pop',
+
+1980,
+
+'EMI Records',
+
+'capas/maniadevoce.jpeg',
+
+8,
+
+9.5,
+
+'Ouvido'
+
+);

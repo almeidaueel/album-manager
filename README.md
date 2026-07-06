@@ -1,12 +1,12 @@
 # 🎵 Album Manager
 
-Sistema web de gerenciamento de álbuns desenvolvido em PHP com MySQL.
+Aplicação CRUD para gerenciamento de álbuns musicais, desenvolvida em PHP e MySQL.
 
-O projeto implementa as operações CRUD permitindo cadastrar, visualizar, editar e excluir álbuns.
+O projeto permite cadastrar, visualizar, editar e excluir álbuns, além de armazenar informações como capa, artista, gênero, número de faixas, avaliação e status de reprodução.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## 🛠️ Tecnologias
 
 - PHP
 - MySQL
@@ -17,110 +17,94 @@ O projeto implementa as operações CRUD permitindo cadastrar, visualizar, edita
 
 ---
 
-## 📌 Funcionalidades
+## ✨ Funcionalidades
 
-- [x] Cadastro de álbuns
-- [x] Listagem de álbuns
-- [x] Edição de informações
-- [x] Exclusão de álbuns
-- [x] Validação de campos obrigatórios
-- [x] Mensagens de feedback ao usuário
+- Cadastro de álbuns
+- Visualização em cards com capa
+- Edição de informações
+- Exclusão de álbuns
+- Avaliação dos álbuns (0 a 10)
+- Controle de status:
+  - Ouvido
+  - Quero ouvir
+- Número de faixas
+- Validação de dados
+- Mensagens de feedback ao usuário
 
 ---
 
-## 📂 Estrutura do projeto
-```
+## 📁 Estrutura do projeto
 
+```text
 album-manager/
 
-├── capas/
-
-├── assets/
-
-├── css/
-
-├── database/
-
+├── assets/          # Imagens utilizadas no README
+├── capas/           # Capas dos álbuns
+├── css/             # Estilos da aplicação
+├── database/        # Script do banco de dados
 │   └── banco.sql
-
-├── includes/
-
+├── includes/        # Arquivos auxiliares
 │   └── conexao.php
-
-├── index.php
-
-├── novo.php
-
-├── salvar.php
-
-├── editar.php
-
-├── atualizar.php
-
-└── excluir.php
-
+│
+├── index.php        # Listagem dos álbuns
+├── novo.php         # Formulário de cadastro
+├── salvar.php       # Inserção no banco
+├── editar.php       # Formulário de edição
+├── atualizar.php    # Atualização no banco
+└── excluir.php      # Remoção de registros
 ```
 
+---
 
-## ⚙️ Como executar o projeto
+## 🚀 Como executar
 
-### 1. Instalar o XAMPP
+### Pré-requisitos
 
-Baixe e instale o XAMPP.
+- PHP
+- MySQL
+- XAMPP
 
-### 2. Clonar o repositório
+### Instalação
+
+1. Clone o repositório:
 
 ```bash
-
 git clone URL_DO_REPOSITORIO
-
 ```
 
-### 3. Mover para o htdocs
-
-Coloque a pasta do projeto dentro:
+2. Mova a pasta do projeto para:
 
 ```
-
 xampp/htdocs
-
 ```
 
-### 4. Criar o banco de dados
+3. Inicie o Apache e MySQL pelo XAMPP.
 
-Abra o phpMyAdmin e importe:
+4. Importe o arquivo:
 
 ```
-
 database/banco.sql
-
 ```
 
-### 5. Configurar conexão
+no phpMyAdmin.
 
-Edite:
+5. Caso necessário, ajuste as credenciais do banco em:
 
 ```
-
 includes/conexao.php
-
 ```
 
-Configure usuário e senha do MySQL.
-
-### 6. Executar
-
-Acesse:
+6. Acesse:
 
 ```
-
 http://localhost/album-manager
-
 ```
+
+---
 
 ## 📸 Preview
 
-Sistema com cards de álbuns, capas e informações detalhadas.
+### Tela inicial
 
 ![Tela inicial](assets/tela-inicial.png)
 
@@ -132,6 +116,8 @@ Sistema com cards de álbuns, capas e informações detalhadas.
 
 ![Edição](assets/edicao.png)
 
-## 👨‍💻 Autor
+---
 
-Desenvolvido por Emanuel.
+## 👨‍💻 Desenvolvido por
+
+Emanuel
