@@ -74,9 +74,9 @@ $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
             </td>
 
             <td>
-                <button>
+                <a href="editar.php?id=<?= $album['id'] ?>">
                     Editar
-                </button>
+                </a>
 
                 <button>
                     Excluir
