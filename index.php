@@ -78,7 +78,9 @@ $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
                     Editar
                 </a>
 
-                <a href="excluir.php?id=<?= $album['id'] ?>">
+                <a 
+                href="excluir.php?id=<?= $album['id'] ?>"
+                onclick="return confirm('Tem certeza que deseja excluir este álbum?')">
                     Excluir
                 </a>
             </td>
