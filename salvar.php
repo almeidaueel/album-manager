@@ -8,6 +8,12 @@ $genero = $_POST['genero'];
 $ano = $_POST['ano'];
 $gravadora = $_POST['gravadora'];
 
+if(empty($titulo) || empty($artista)) {
+
+    header("Location: novo.php?erro=campos");
+    exit;
+
+}
 
 $sql = "INSERT INTO albums 
 (titulo, artista, genero, ano, gravadora)
@@ -26,4 +32,4 @@ $stmt->execute([
 ]);
 
 
-header("Location: index.php");
+header("Location: index.php?sucesso=cadastro");

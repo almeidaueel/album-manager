@@ -1,9 +1,24 @@
+<?php
+
+if(isset($_GET['erro'])) {
+
+    echo "
+    <p>
+        Preencha título e artista!
+    </p>
+    ";
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <title>Novo Álbum</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>

@@ -8,6 +8,30 @@ $resultado = $conexao->query($sql);
 
 $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
+if(isset($_GET['sucesso'])){
+
+    echo "
+
+    <div class='mensagem sucesso'>
+
+        Álbum cadastrado com sucesso!
+
+    </div>
+
+    ";
+
+}
+
+if($_GET['sucesso'] == "editar"){
+
+echo "
+<div class='mensagem sucesso'>
+Álbum atualizado com sucesso!
+</div>
+";
+
+}
+
 ?>
 
 <!DOCTYPE html>

@@ -16,6 +16,7 @@ $stmt->execute([$id]);
 
 $album = $stmt->fetch(PDO::FETCH_ASSOC);
 
+header("Location:index.php?sucesso=editar");
 
 ?>
 
