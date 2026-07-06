@@ -2,6 +2,7 @@
 
 require_once "includes/conexao.php";
 
+$capa = $_POST['capa'];
 $titulo = $_POST['titulo'];
 $artista = $_POST['artista'];
 $genero = $_POST['genero'];
@@ -16,14 +17,15 @@ if(empty($titulo) || empty($artista)) {
 }
 
 $sql = "INSERT INTO albums 
-(titulo, artista, genero, ano, gravadora)
+(capa, titulo, artista, genero, ano, gravadora)
 VALUES
-(?, ?, ?, ?, ?)";
+(?, ?, ?, ?, ?, ?)";
 
 
 $stmt = $conexao->prepare($sql);
 
 $stmt->execute([
+    $capa,
     $titulo,
     $artista,
     $genero,

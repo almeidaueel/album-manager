@@ -26,7 +26,17 @@ if(isset($_GET['erro'])) {
 <h1>Cadastrar Álbum</h1>
 
 <form action="salvar.php" method="POST">
+    <label>
+    Capa do álbum:
+    </label>
 
+    <br>
+
+    <input 
+        type="text" 
+        name="capa"
+        placeholder="ex: capas/lancaperfume.jpeg">
+    
     <label>
         Título:
     </label>

@@ -49,73 +49,46 @@ echo "
 
 <body>
 
-<div class="container">
+<div class="cards">
 
-    <h1>🎵 Album Manager</h1>
+<?php foreach($albuns as $album): ?>
 
-    <a class="botao" href="novo.php">
-        + Novo Álbum
-    </a>
+<div class="card">
 
-
-    <h2>Álbuns cadastrados</h2>
-
-
-    <table>
-
-        <tr>
-            <th>Título</th>
-            <th>Artista</th>
-            <th>Gênero</th>
-            <th>Ano</th>
-            <th>Gravadora</th>
-            <th>Ações</th>
-        </tr>
+<img 
+src="<?= $album['capa'] ?>"
+alt="Capa do álbum">
 
 
-        <?php foreach($albuns as $album): ?>
-
-        <tr>
-
-            <td>
-                <?= $album['titulo'] ?>
-            </td>
-
-            <td>
-                <?= $album['artista'] ?>
-            </td>
-
-            <td>
-                <?= $album['genero'] ?>
-            </td>
-
-            <td>
-                <?= $album['ano'] ?>
-            </td>
-
-            <td>
-                <?= $album['gravadora'] ?>
-            </td>
-
-            <td>
-                <a href="editar.php?id=<?= $album['id'] ?>">
-                    Editar
-                </a>
-
-                <a 
-                href="excluir.php?id=<?= $album['id'] ?>"
-                onclick="return confirm('Tem certeza que deseja excluir este álbum?')">
-                    Excluir
-                </a>
-            </td>
-
-        </tr>
-
-        <?php endforeach; ?>
+<h3>
+<?= $album['titulo'] ?>
+</h3>
 
 
-    </table>
+<p>
+<?= $album['artista'] ?>
+</p>
 
+
+<p>
+<?= $album['ano'] ?>
+</p>
+
+
+<a href="editar.php?id=<?= $album['id'] ?>">
+Editar
+</a>
+
+
+<a href="excluir.php?id=<?= $album['id'] ?>">
+Excluir
+</a>
+
+
+</div>
+
+
+<?php endforeach; ?>
 
 </div>
 
