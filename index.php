@@ -11,18 +11,22 @@ $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+    <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Album Manager</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Album Manager</title>
+    </head>
 
-<body>
+    <body>
 
-<h1>Album Manager</h1>
+        <h1>Album Manager</h1>
+        
+        <a href="novo.php">+ Novo Álbum</a>
 
-<h2>Álbuns cadastrados</h2>
+        <h2>Álbuns cadastrados</h2>
+
+
 
 
 <?php foreach($albuns as $album): ?>
@@ -36,6 +40,6 @@ $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
 <?php endforeach; ?>
 
 
-</body>
+    </body>
 
 </html>
