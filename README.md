@@ -2,7 +2,7 @@
 
 Sistema web de gerenciamento de álbuns desenvolvido em PHP com MySQL.
 
-O projeto implementa as operações CRUD (Create, Read, Update e Delete), permitindo cadastrar, visualizar, editar e excluir álbuns.
+O projeto implementa as operações CRUD permitindo cadastrar, visualizar, editar e excluir álbuns.
 
 ---
 
@@ -34,6 +34,8 @@ O projeto implementa as operações CRUD (Create, Read, Update e Delete), permit
 album-manager/
 
 ├── capas/
+
+├── assets/
 
 ├── css/
 
