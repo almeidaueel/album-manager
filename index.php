@@ -11,35 +11,88 @@ $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
-    <html lang="pt-BR">
+<html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Album Manager</title>
-    </head>
+<head>
 
-    <body>
+    <meta charset="UTF-8">
+    <title>Album Manager</title>
 
-        <h1>Album Manager</h1>
-        
-        <a href="novo.php">+ Novo Álbum</a>
+    <link rel="stylesheet" href="css/style.css">
 
-        <h2>Álbuns cadastrados</h2>
+</head>
 
 
+<body>
+
+<div class="container">
+
+    <h1>🎵 Album Manager</h1>
+
+    <a class="botao" href="novo.php">
+        + Novo Álbum
+    </a>
 
 
-<?php foreach($albuns as $album): ?>
-
-    <p>
-        <?php echo $album['titulo']; ?>
-        -
-        <?php echo $album['artista']; ?>
-    </p>
-
-<?php endforeach; ?>
+    <h2>Álbuns cadastrados</h2>
 
 
-    </body>
+    <table>
+
+        <tr>
+            <th>Título</th>
+            <th>Artista</th>
+            <th>Gênero</th>
+            <th>Ano</th>
+            <th>Gravadora</th>
+            <th>Ações</th>
+        </tr>
+
+
+        <?php foreach($albuns as $album): ?>
+
+        <tr>
+
+            <td>
+                <?= $album['titulo'] ?>
+            </td>
+
+            <td>
+                <?= $album['artista'] ?>
+            </td>
+
+            <td>
+                <?= $album['genero'] ?>
+            </td>
+
+            <td>
+                <?= $album['ano'] ?>
+            </td>
+
+            <td>
+                <?= $album['gravadora'] ?>
+            </td>
+
+            <td>
+                <button>
+                    Editar
+                </button>
+
+                <button>
+                    Excluir
+                </button>
+            </td>
+
+        </tr>
+
+        <?php endforeach; ?>
+
+
+    </table>
+
+
+</div>
+
+</body>
 
 </html>
