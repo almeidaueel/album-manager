@@ -16,7 +16,7 @@ $status = !empty($_POST['status']) ? $_POST['status'] : null;
 
 
 
-if(empty($titulo) || empty($artista)) {
+if (empty($titulo) || empty($artista)) {
 
     header("Location: editar.php?id=$id&erro=campos");
     exit;

@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 require_once "includes/conexao.php";
 
 
-if(!isset($_GET['id'])) {
+if (!isset($_GET['id'])) {
 
     header("Location: index.php");
     exit;
@@ -29,7 +29,7 @@ $album = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 
-if(!$album) {
+if (!$album) {
 
     header("Location: index.php");
     exit;
@@ -56,215 +56,167 @@ if(!$album) {
 <body>
 
 
-<div class="container">
+    <div class="container">
 
 
-<h1>✏️ Editar Álbum</h1>
+        <h1>✏️ Editar Álbum</h1>
 
 
 
-<form action="atualizar.php" method="POST">
+        <form action="atualizar.php" method="POST">
 
 
-<input 
-    type="hidden"
-    name="id"
-    value="<?= $album['id'] ?>"
->
+            <input type="hidden" name="id" value="<?= $album['id'] ?>">
 
 
 
-<label>
-    Capa do álbum:
-</label>
+            <label>
+                Capa do álbum:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="text"
-    name="capa"
-    value="<?= htmlspecialchars($album['capa']) ?>"
-    placeholder="Ex: capas/default.jpeg"
->
+            <input type="text" name="capa" value="<?= htmlspecialchars($album['capa']) ?>"
+                placeholder="Ex: capas/default.jpeg">
 
 
-<br><br>
+            <br><br>
 
 
 
-<label>
-    Título:
-</label>
+            <label>
+                Título:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="text"
-    name="titulo"
-    value="<?= htmlspecialchars($album['titulo']) ?>"
-    required
->
+            <input type="text" name="titulo" value="<?= htmlspecialchars($album['titulo']) ?>" required>
 
 
-<br><br>
+            <br><br>
 
 
 
-<label>
-    Artista:
-</label>
+            <label>
+                Artista:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="text"
-    name="artista"
-    value="<?= htmlspecialchars($album['artista']) ?>"
-    required
->
+            <input type="text" name="artista" value="<?= htmlspecialchars($album['artista']) ?>" required>
 
 
-<br><br>
+            <br><br>
 
 
 
-<label>
-    Gênero:
-</label>
+            <label>
+                Gênero:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="text"
-    name="genero"
-    value="<?= htmlspecialchars($album['genero']) ?>"
->
+            <input type="text" name="genero" value="<?= htmlspecialchars($album['genero']) ?>">
 
 
-<br><br>
+            <br><br>
 
 
 
-<label>
-    Ano:
-</label>
+            <label>
+                Ano:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="number"
-    name="ano"
-    value="<?= htmlspecialchars($album['ano']) ?>"
-    min="1900"
->
+            <input type="number" name="ano" value="<?= htmlspecialchars($album['ano']) ?>" min="1900">
 
 
-<br><br>
+            <br><br>
 
 
 
-<label>
-    Gravadora:
-</label>
+            <label>
+                Gravadora:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="text"
-    name="gravadora"
-    value="<?= htmlspecialchars($album['gravadora']) ?>"
->
+            <input type="text" name="gravadora" value="<?= htmlspecialchars($album['gravadora']) ?>">
 
 
-<br><br>
+            <br><br>
 
-<label>
-    Número de faixas:
-</label>
+            <label>
+                Número de faixas:
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="number"
-    name="faixas"
-    value="<?= htmlspecialchars($album['faixas']) ?>"
-    min="1"
->
+            <input type="number" name="faixas" value="<?= htmlspecialchars($album['faixas']) ?>" min="1">
 
 
-<br><br>
+            <br><br>
 
 
-<label>
-    Nota (0 a 10):
-</label>
+            <label>
+                Nota (0 a 10):
+            </label>
 
-<br>
+            <br>
 
-<input
-    type="number"
-    name="nota"
-    value="<?= htmlspecialchars($album['nota']) ?>"
-    min="0"
-    max="10"
-    step="0.1"
->
+            <input type="number" name="nota" value="<?= htmlspecialchars($album['nota']) ?>" min="0" max="10"
+                step="0.1">
 
 
-<br><br>
+            <br><br>
 
 
-<label>
-    Status:
-</label>
+            <label>
+                Status:
+            </label>
 
-<br>
+            <br>
 
-<select name="status">
+            <select name="status">
 
 
-<option 
-value="Ouvido"
-<?= $album['status'] == "Ouvido" ? "selected" : "" ?>
->
-Ouvido
-</option>
+                <option value="Ouvido" <?= $album['status'] == "Ouvido" ? "selected" : "" ?>>
+                    Ouvido
+                </option>
 
 
-<option 
-value="Quero ouvir"
-<?= $album['status'] == "Quero ouvir" ? "selected" : "" ?>
->
-Quero ouvir
-</option>
+                <option value="Quero ouvir" <?= $album['status'] == "Quero ouvir" ? "selected" : "" ?>>
+                    Quero ouvir
+                </option>
 
 
-</select>
+            </select>
 
 
-<br><br>
+            <br><br>
 
 
 
 
-<button type="submit">
-    Atualizar Álbum
-</button>
+            <button type="submit">
+                Atualizar Álbum
+            </button>
 
 
-</form>
+        </form>
 
 
-<br>
+        <br>
 
 
-<a class="botao" href="index.php">
-    Voltar
-</a>
+        <a class="botao" href="index.php">
+            Voltar
+        </a>
 
 
 
-</div>
+    </div>
 
 
 </body>

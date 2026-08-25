@@ -29,106 +29,105 @@ $albuns = $resultado->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 
-<div class="container">
+    <div class="container">
 
 
-<h1>🎵 Album Manager</h1>
+        <h1>🎵 Album Manager</h1>
 
 
-<a class="botao" href="novo.php">
-    + Novo Álbum
-</a>
+        <a class="botao" href="novo.php">
+            + Novo Álbum
+        </a>
 
 
-<?php if(isset($_GET['sucesso'])): ?>
+        <?php if (isset($_GET['sucesso'])): ?>
 
 
-    <?php if($_GET['sucesso'] == "cadastro"): ?>
+            <?php if ($_GET['sucesso'] == "cadastro"): ?>
 
-        <div class="mensagem sucesso">
-            Álbum cadastrado com sucesso!
-        </div>
+                <div class="mensagem sucesso">
+                    Álbum cadastrado com sucesso!
+                </div>
 
-    <?php endif; ?>
-
-
-    <?php if($_GET['sucesso'] == "editar"): ?>
-
-        <div class="mensagem sucesso">
-            Álbum atualizado com sucesso!
-        </div>
-
-    <?php endif; ?>
+            <?php endif; ?>
 
 
-<?php endif; ?>
+            <?php if ($_GET['sucesso'] == "editar"): ?>
+
+                <div class="mensagem sucesso">
+                    Álbum atualizado com sucesso!
+                </div>
+
+            <?php endif; ?>
 
 
-
-<div class="cards">
-
-
-<?php foreach($albuns as $album): ?>
-
-
-<div class="card">
-
-
-<img 
-src="<?= !empty($album['capa']) ? htmlspecialchars($album['capa']) : 'capas/default.jpeg' ?>"
-alt="Capa do álbum"
->
+        <?php endif; ?>
 
 
 
-<h3>
-<?= htmlspecialchars($album['titulo']) ?>
-</h3>
+        <div class="cards">
+
+
+            <?php foreach ($albuns as $album): ?>
+
+
+                <div class="card">
+
+
+                    <img src="<?= !empty($album['capa']) ? htmlspecialchars($album['capa']) : 'capas/default.jpeg' ?>"
+                        alt="Capa do álbum">
 
 
 
-<p>
-<?= htmlspecialchars($album['artista']) ?>
-</p>
+                    <h3>
+                        <?= htmlspecialchars($album['titulo']) ?>
+
+                        </h3>
 
 
 
-<p>
-<?= htmlspecialchars($album['ano']) ?>
-</p>
-
-<p>
-🎵 <?= $album['faixas'] ?> faixas
-</p>
-
-
-<p>
-⭐ <?= $album['nota'] ?>/10
-</p>
-
-
-<p>
-🎧 <?= $album['status'] ?>
-</p>
+    <p>
+    <?= htmlspecialchars($album['artista']) ?>
+    </p>
 
 
 
-<a href="editar.php?id=<?= $album['id'] ?>">
-Editar
-</a>
+    <p>
+    <?= htmlspecialchars($album['ano']) ?>
+    </p>
+
+    <p>
+    🎵 <?= $album['faixas'] ?> faixas
+    </p>
+
+
+    <p>
+    ⭐ <?= $album['nota'] ?>/10
+    </p>
+
+
+    <p>
+    🎧 <?= $album['status'] ?>
+    </p>
 
 
 
-<a 
-href="excluir.php?id=<?= $album['id'] ?>"
-onclick="return confirm('Tem certeza que deseja excluir este álbum?')"
->
-Excluir
-</a>
+    <a href="editar.php?id=<?= $album['id'] ?>">
+    Editar
+    </a>
 
 
 
-</div>
+    <a 
+    href="excluir.php?id=<?= $album['id'] ?>"
+    onclick="return confirm('Tem certeza que deseja excluir este álbum?')"
+    >
+    Excluir
+    </a>
+
+
+
+    </div>
 
 
 <?php endforeach; ?>

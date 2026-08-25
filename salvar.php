@@ -15,7 +15,7 @@ $faixas = !empty($_POST['faixas']) ? $_POST['faixas'] : null;
 $nota = !empty($_POST['nota']) ? $_POST['nota'] : null;
 $status = !empty($_POST['status']) ? $_POST['status'] : null;
 
-if(empty($titulo) || empty($artista)) {
+if (empty($titulo) || empty($artista)) {
 
     header("Location: novo.php?erro=campos");
     exit;

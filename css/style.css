@@ -1,382 +1,261 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
 
-    font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #111, #2b2b2b);
 
-    background: linear-gradient(
-        135deg,
-        #111,
-        #2b2b2b
-    );
+  margin: 0;
 
-    margin: 0;
+  min-height: 100vh;
 
-    min-height: 100vh;
-
-    color: #222;
-
+  color: #222;
 }
-
-
 
 .container {
+  width: 90%;
 
-    width: 90%;
+  max-width: 1100px;
 
-    max-width: 1100px;
-
-    margin: 40px auto;
-
+  margin: 40px auto;
 }
-
-
 
 /* Títulos */
 
 h1 {
+  text-align: center;
 
-    text-align: center;
+  color: white;
 
-    color: white;
+  margin-bottom: 30px;
 
-    margin-bottom: 30px;
-
-    font-size: 35px;
-
+  font-size: 35px;
 }
-
-
 
 /* Botões */
 
 .botao {
+  display: inline-block;
 
-    display: inline-block;
+  background: #1db954;
 
-    background: #1db954;
+  color: white;
 
-    color: white;
+  padding: 12px 22px;
 
-    padding: 12px 22px;
+  text-decoration: none;
 
-    text-decoration: none;
+  border-radius: 25px;
 
-    border-radius: 25px;
+  font-weight: bold;
 
-    font-weight: bold;
-
-    transition: .3s;
-
+  transition: 0.3s;
 }
-
-
 
 .botao:hover {
+  background: #18a84a;
 
-    background: #18a84a;
-
-    transform: scale(1.05);
-
+  transform: scale(1.05);
 }
-
-
 
 button {
+  background: #1db954;
 
-    background: #1db954;
+  color: white;
 
-    color: white;
+  padding: 12px 25px;
 
-    padding: 12px 25px;
+  border: none;
 
-    border: none;
+  border-radius: 25px;
 
-    border-radius: 25px;
+  cursor: pointer;
 
-    cursor: pointer;
+  font-size: 15px;
 
-    font-size: 15px;
+  font-weight: bold;
 
-    font-weight: bold;
-
-    transition: .3s;
-
+  transition: 0.3s;
 }
-
-
 
 button:hover {
+  transform: scale(1.05);
 
-    transform: scale(1.05);
-
-    background: #18a84a;
-
+  background: #18a84a;
 }
-
-
 
 /* Cards */
 
 .cards {
+  display: grid;
 
-    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(230px, 1fr)
-    );
+  gap: 30px;
 
-    gap: 30px;
-
-    margin-top: 30px;
-
+  margin-top: 30px;
 }
-
-
 
 .card {
+  background: white;
 
-    background: white;
+  padding: 20px;
 
-    padding: 20px;
+  border-radius: 20px;
 
-    border-radius: 20px;
+  text-align: center;
 
-    text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-
-    transition: .3s;
-
+  transition: 0.3s;
 }
-
-
 
 .card:hover {
-
-    transform: translateY(-8px);
-
+  transform: translateY(-8px);
 }
-
-
 
 .card img {
+  width: 100%;
 
-    width: 100%;
+  max-width: 200px;
 
-    max-width: 200px;
+  height: 200px;
 
-    height: 200px;
+  object-fit: cover;
 
-    object-fit: cover;
+  border-radius: 15px;
 
-    border-radius: 15px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-
 
 .card h3 {
+  margin-top: 20px;
 
-    margin-top: 20px;
+  margin-bottom: 10px;
 
-    margin-bottom: 10px;
-
-    font-size: 22px;
-
+  font-size: 22px;
 }
-
-
 
 .card p {
+  margin: 8px;
 
-    margin: 8px;
-
-    color: #555;
-
+  color: #555;
 }
-
-
 
 /* Links dos cards */
 
 .card a {
+  display: inline-block;
 
-    display: inline-block;
+  margin: 8px 5px;
 
-    margin: 8px 5px;
+  padding: 8px 14px;
 
-    padding: 8px 14px;
+  border-radius: 20px;
 
-    border-radius: 20px;
+  text-decoration: none;
 
-    text-decoration: none;
+  background: #111;
 
-    background: #111;
+  color: white;
 
-    color: white;
+  font-size: 14px;
 
-    font-size: 14px;
-
-    transition: .3s;
-
+  transition: 0.3s;
 }
-
-
 
 .card a:hover {
-
-    background: #1db954;
-
+  background: #1db954;
 }
-
-
 
 /* Formulários */
 
-
 form {
+  background: white;
 
-    background: white;
+  padding: 35px;
 
-    padding: 35px;
+  border-radius: 20px;
 
-    border-radius: 20px;
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.25);
-
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
-
-
 
 label {
-
-    font-weight: bold;
-
+  font-weight: bold;
 }
-
-
 
 input,
 select {
+  width: 100%;
 
+  padding: 12px;
 
-    width: 100%;
+  margin-top: 8px;
 
-    padding: 12px;
+  border-radius: 10px;
 
-    margin-top: 8px;
+  border: 1px solid #ccc;
 
-    border-radius: 10px;
-
-    border: 1px solid #ccc;
-
-    font-size: 15px;
-
+  font-size: 15px;
 }
-
-
 
 input:focus,
 select:focus {
+  outline: none;
 
-    outline: none;
-
-    border-color: #1db954;
-
+  border-color: #1db954;
 }
-
-
 
 /* Mensagens */
 
-
 .mensagem {
+  padding: 15px;
 
-    padding: 15px;
+  margin-bottom: 20px;
 
-    margin-bottom: 20px;
+  border-radius: 12px;
 
-    border-radius: 12px;
-
-    font-weight: bold;
-
+  font-weight: bold;
 }
-
-
 
 .sucesso {
+  background: #d4edda;
 
-    background: #d4edda;
-
-    color: #155724;
-
+  color: #155724;
 }
-
-
 
 .erro {
+  background: #f8d7da;
 
-    background: #f8d7da;
-
-    color: #721c24;
-
+  color: #721c24;
 }
-
-
 
 /* Status */
 
-
 .status {
-
-    font-weight: bold;
-
+  font-weight: bold;
 }
-
-
 
 /* Responsividade */
 
-@media(max-width:600px){
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
 
+    margin: 20px auto;
+  }
 
-    .container {
+  h1 {
+    font-size: 28px;
+  }
 
-        width: 95%;
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-        margin: 20px auto;
-
-    }
-
-
-    h1 {
-
-        font-size: 28px;
-
-    }
-
-
-    .cards {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .card img {
-
-        height: 220px;
-
-    }
-
-
+  .card img {
+    height: 220px;
+  }
 }
