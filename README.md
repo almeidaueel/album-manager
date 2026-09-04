@@ -2,11 +2,11 @@
 
 Aplicação CRUD para gerenciamento de álbuns musicais, desenvolvida em PHP e MySQL.
 
-O projeto permite cadastrar, visualizar, editar e excluir álbuns, além de armazenar informações como capa, artista, gênero, número de faixas, avaliação e status de reprodução.
+O projeto permite cadastrar, visualizar, editar e excluir álbuns, além de armazenar informações como a capa, artista, gênero e o número de faixas.
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - PHP
 - MySQL
@@ -17,7 +17,7 @@ O projeto permite cadastrar, visualizar, editar e excluir álbuns, além de arma
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Cadastro de álbuns
 - Visualização em cards com capa
@@ -33,7 +33,7 @@ O projeto permite cadastrar, visualizar, editar e excluir álbuns, além de arma
 
 ---
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 album-manager/
@@ -56,7 +56,7 @@ album-manager/
 
 ---
 
-## 🚀 Como executar
+## Como executar
 
 ### Pré-requisitos
 
@@ -69,7 +69,7 @@ album-manager/
 1. Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone github.com/almeidaueel/album-manager
 ```
 
 2. Mova a pasta do projeto para:
@@ -88,7 +88,7 @@ database/banco.sql
 
 no phpMyAdmin.
 
-5. Caso necessário, ajuste as credenciais do banco em:
+5. Ajustar as credenciais do banco em:
 
 ```
 includes/conexao.php
@@ -118,6 +118,6 @@ http://localhost/album-manager
 
 ---
 
-## 👨‍💻 Desenvolvido por
+## Desenvolvido por
 
 Emanuel
